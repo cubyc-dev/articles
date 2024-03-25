@@ -64,7 +64,7 @@ odf = OracleDataFrame.from_csv("pl_data.csv")
 # init the backtester
 bt = BackTester()
 # add your boilerplate model
-def season_retrain(data):
+def pl_season_retrain(data):
     metrics = []
     X = data.drop("result", axis=1)
     y = data["result"]
@@ -83,16 +83,16 @@ def season_retrain(data):
 
 Running the backtester is as easy as:
 ```python
-@bt.do_every(months=1).do(season_retrain(odf))
+@bt.do_every(months=1).do(retrain(odf))
 ```
 
 
 #### What just happened?
 You just built production-level ML architecture in less than 15 lines of code! By passing an `OracleDataFrame` into `@bt.do_every.do`, Historyc © pegged attached itself to our datetime column. Why? 
 
-*Because not all Premier League matchdays are the same*. Continually backtesting and evaluating model performance is what allows us to slice the season into chunks, be it entire seasons, season start, middle, and run-in. 
+*Because not all Premier League matchdays are the same*. Continually backtesting and evaluating model performance is what allows us to slice the season into chunks, be it entire seasons, season start, middle, and run-in.
 
-![image](snow.png)
+<img src="snow.png" width=380/>
 
 ### What's next? 
 ```python
@@ -101,9 +101,7 @@ season = [(2023-08-01, 2023,2023-11-01),
 (2023-12-01, 2024-03-01), 
 (2024-03-02, 2024-05-31)]
 
-@bt.do_every(season).do(season_retrain(odf))
+@bt.do_every(season).do(retrain(odf))
 ```
 
-
-##### You can now maneauver in time throughout the season according to your data team's heuristics. Thereby maintaining a flexible architecture centered around human decisions - as opposed as one constrained by data parsing and ad-hoc for loops. 
 ---
