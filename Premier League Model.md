@@ -104,4 +104,6 @@ season = [(2023-08-01, 2023,2023-11-01),
 @bt.do_every(season).do(retrain(odf))
 ```
 
+You can now maneauver in time throughout the season given the requirements from your data team. The historyc engine allows you to maintain a flexible architecture centered around human decision - as opposed to one constrained by data parsing and adhoc for-loops.
+
 ---
