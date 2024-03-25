@@ -97,7 +97,7 @@ Continually backtesting and evaluating model performance is what allows us to sl
 ### What's next? 
 ```python
 # season start, mid-season, season run-in
-season = [(2023-08-01, 2023,2023-11-01), 
+season = [(2023-08-01, 2023-11-01), 
 (2023-12-01, 2024-03-01), 
 (2024-03-02, 2024-05-31)]
 
