@@ -88,9 +88,9 @@ Running the backtester is as easy as:
 
 
 #### What just happened?
-You just built production-level ML architecture in less than 15 lines of code! By passing an `OracleDataFrame` into `@bt.do_every.do`, Historyc © pegged attached itself to our datetime column. Why? 
+You just built production-level ML architecture in less than 15 lines of code! By passing an `OracleDataFrame` into `@bt.do_every.do`, Historyc © pegged attached itself to our datetime column. Why? *Not all Premier League matchdays are the same*. 
 
-*Because not all Premier League matchdays are the same*. Continually backtesting and evaluating model performance is what allows us to slice the season into chunks, be it entire seasons, season start, middle, and run-in.
+Continually backtesting and evaluating model performance is what allows us to slice the season into chunks, be it entire seasons, season start, middle, and run-in.
 
 <img src="snow.png" width=380/>
 
