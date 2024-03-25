@@ -104,5 +104,6 @@ season = [(2023-08-01, 2023,2023-11-01),
 @bt.do_every(season).do(season_retrain(odf))
 ```
 
-You can now maneauver in time throughout the season according to your data team's heuristic, maintaining a flexible architecture centered around human decisions - as opposed as one constrained by data parsing and ad-hoc for loops. 
+
+##### You can now maneauver in time throughout the season according to your data team's heuristic, maintaining a flexible architecture centered around human decisions - as opposed as one constrained by data parsing and ad-hoc for loops. 
 ---
