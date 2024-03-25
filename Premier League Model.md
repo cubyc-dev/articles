@@ -64,7 +64,7 @@ odf = OracleDataFrame.from_csv("pl_data.csv")
 # init the backtester
 bt = BackTester()
 # add your boilerplate model
-def pl_season_retrain(data):
+def season_retrain(data):
     metrics = []
     X = data.drop("result", axis=1)
     y = data["result"]
@@ -83,7 +83,7 @@ def pl_season_retrain(data):
 
 Running the backtester is as easy as:
 ```python
-@bt.do_every(months=1).do(retrain(odf))
+@bt.do_every(months=1).do(season_retrain(odf))
 ```
 
 
@@ -101,7 +101,8 @@ season = [(2023-08-01, 2023,2023-11-01),
 (2023-12-01, 2024-03-01), 
 (2024-03-02, 2024-05-31)]
 
-@bt.do_every(season).do(retrain(odf))
+@bt.do_every(season).do(season_retrain(odf))
 ```
 
+You can now maneauver in time throughout the season according to your data team's heuristic, maintaining a flexible architecture centered around human decisions - as opposed as one constrained by data parsing and ad-hoc for loops. 
 ---
